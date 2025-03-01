@@ -4,12 +4,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import pl.pjatk.Slarud.JestemKlasa;
 import pl.pjatk.Slarud.cwiczenie_1.Chlep;
 import pl.pjatk.Slarud.cwiczenie_1.Mleko;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
