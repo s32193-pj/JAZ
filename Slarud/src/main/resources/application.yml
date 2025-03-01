@@ -1,0 +1,10 @@
+#spring:
+#  application:
+#    name: Slarud
+#my:
+#  custom:
+#    property: '''Hello from application properties'''
+#
+#some:
+#  second:
+#    property: false
