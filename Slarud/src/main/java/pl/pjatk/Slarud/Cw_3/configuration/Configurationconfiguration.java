@@ -2,8 +2,10 @@ package pl.pjatk.Slarud.Cw_3.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import pl.pjatk.Slarud.JestemKlasa;
 import pl.pjatk.Slarud.cwiczenie_1.Chlep;
 import pl.pjatk.Slarud.cwiczenie_1.Mleko;
@@ -41,5 +43,24 @@ public class Configurationconfiguration {
         System.out.println("jestemKlasa2");
         return new JestemKlasa();
     }
+
+
+    @Bean
+    public CustomPropertiesExcercise customProperties() {
+        return new CustomPropertiesExcercise();
+    }
+
+    @Bean
+    public JestemKlasa jestemKlasa3(CustomPropertiesExcercise customPropertiesExcercise) {
+        System.out.println(customPropertiesExcercise.getCredentials().getUser());
+        System.out.println(customPropertiesExcercise.getCredentials().getPassword());
+        System.out.println(customPropertiesExcercise.getLoginUrl());
+
+
+
+
+        return new JestemKlasa();
+    }
+
 
 }
